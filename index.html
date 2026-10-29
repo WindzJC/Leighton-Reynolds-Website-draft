@@ -12,11 +12,16 @@
   <meta property="og:type" content="website">
   <meta property="og:title" content="Moon Over Seaville | Leighton J. Reynolds">
   <meta property="og:description" content="A wildfire story in four episodes. When the fire burns the evidence, a psychoanalyst follows the mind.">
-  <meta property="og:image" content="og-image.jpg">
+  <meta property="og:image" content="https://leighton-reynolds.pages.dev/og-image.jpg">
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
   <meta property="og:image:alt" content="The four Moon Over Seaville covers in order, from moonrise to firestorm to embers">
   <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:image" content="https://leighton-reynolds.pages.dev/og-image.jpg">
+  <link rel="icon" href="favicon.ico" sizes="any">
+  <link rel="icon" href="favicon-32.png" type="image/png" sizes="32x32">
+  <link rel="icon" href="favicon-16.png" type="image/png" sizes="16x16">
+  <link rel="apple-touch-icon" href="apple-touch-icon.png">
   <style>
 /* Moon Over Seaville — homepage concept by Astra Productions
    The fire rises and dies across four episodes; the moon is in every sky. */
@@ -127,6 +132,14 @@ a.logotype { display: inline-flex; align-items: center; min-height: 44px; }
 .t-over { font-size: clamp(1.3rem, 2.8vw, 2.4rem); margin: .1em 0 .15em .35em; color: #E9C7A9; }
 .hero__kind { margin: 0 0 .8rem; font-style: italic; color: #DCE3E8; font-size: 1.08rem; }
 .hero__premise { margin: 0 0 1.6rem; font-size: clamp(1.2rem, 1.8vw, 1.45rem); line-height: 1.45; color: var(--bone); max-width: 30rem; }
+.hero__actions { display: flex; align-items: center; flex-wrap: wrap; gap: .8rem 1.35rem; }
+.hero__secondary { display: inline-flex; align-items: center; gap: .55rem; min-height: 50px; color: #F9E0C9; font-weight: 600; text-decoration-color: #F0AC76; text-underline-offset: .38em; }
+.hero__secondary:hover { color: #FFF; }
+.hero__secondary span { font-family: var(--label); font-size: .85rem; }
+.ep__spotlight { width: fit-content; margin: 1rem 0 0; padding: .35rem .7rem; border: 1px solid rgba(255,196,139,.54); color: #FFD4AB; font-family: var(--label); text-transform: uppercase; letter-spacing: .13em; font-size: .69rem; line-height: 1.5; }
+.ep__purchase { display: inline-flex; gap: .55rem; align-items: center; min-height: 48px; margin-top: 1.8rem; color: #FFE0BD; font-weight: 600; text-decoration-color: #F6AD70; text-underline-offset: .4em; }
+.ep__purchase:hover { color: white; }
+.author__other { margin-top: .95rem !important; }
 
 .series { position: relative; max-width: var(--wrap); margin: clamp(1.8rem, 3vw, 2.4rem) auto 0; }
 .heat { display: block; height: 2px; margin-top: 12px; border-radius: 2px; background: #FFB45A; }
@@ -297,6 +310,8 @@ a.logotype { display: inline-flex; align-items: center; min-height: 44px; }
   .js .site-nav a { width: 100%; font-size: 1.05rem; }
   .site-header { padding-block: .6rem; }
   .logotype { font-size: .78rem; letter-spacing: .2em; }
+  .hero__actions { align-items: flex-start; }
+  .ep__purchase { margin-top: 1.4rem; }
 
   .hero__inner { grid-template-columns: minmax(0, 1fr); gap: 1.4rem; }
   .t-moon, .t-seaville { font-size: clamp(3rem, 15.5vw, 4.6rem); }
@@ -311,6 +326,13 @@ a.logotype { display: inline-flex; align-items: center; min-height: 44px; }
   .thirteen__figures { gap: .8rem; }
 }
 
+@media (max-width: 380px) {
+  .site-header { flex-wrap: nowrap; gap: .4rem; }
+  .site-header .logotype { font-size: .68rem; letter-spacing: .13em; white-space: nowrap; }
+  .site-header .menu-toggle { flex: none; padding: 0 .62rem; font-size: .92rem; }
+  .js .site-nav { position: absolute; top: 100%; left: 0; right: 0; padding: 0 var(--gutter) .7rem; background: var(--dusk); border-top: 1px solid rgba(244,238,230,.12); box-shadow: 0 18px 24px rgba(0,0,0,.23); }
+  .hero__actions { gap: .9rem; }
+}
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }
   .ep__fire, .series__list img, .button { transition: none !important; }
@@ -330,7 +352,7 @@ a.logotype { display: inline-flex; align-items: center; min-height: 44px; }
       <ul>
         <li><a href="#episodes">The episodes</a></li>
         <li><a href="#people">The people</a></li>
-        <li><a href="#thirteen">13 vs. 5</a></li>
+        <li><a href="#thirteen">The question</a></li>
         <li><a href="#author">The author</a></li>
       </ul>
     </nav>
@@ -346,8 +368,8 @@ a.logotype { display: inline-flex; align-items: center; min-height: 44px; }
         </h1>
         <div class="hero__intro">
           <p class="hero__kind">A wildfire story in four episodes by Dr.&nbsp;Leighton&nbsp;J.&nbsp;Reynolds</p>
-          <p class="hero__premise">Eight wildfires in one October, and the evidence burns with them. So a psychoanalyst sets out to track the arsonist through the mind.</p>
-          <a class="button" href="#episodes">Follow the fire</a>
+          <p class="hero__premise">As wildfire closes in on Seaville, Dr. Roger Sterling believes the hunt for a serial arsonist must follow the human mind—not only the physical evidence.</p>
+          <div class="hero__actions"><a class="button" href="#episodes">Follow the four episodes</a><a class="hero__secondary" href="#episode-3">Enter Episode Three <span aria-hidden="true">↗</span></a></div>
         </div>
       </div>
 
@@ -420,6 +442,7 @@ a.logotype { display: inline-flex; align-items: center; min-height: 44px; }
             <p class="ep__opener">While Sterling searches for his kidnapped children</p>
             <h3 id="ep3-title">What’s Behind the Moon</h3>
             <p class="ep__meta">2021, 408 pages</p>
+            <p class="ep__spotlight">The firestorm at the heart of the series</p>
             <div class="ep__layers">
               <div>
                 <h4>What burns</h4>
@@ -427,9 +450,10 @@ a.logotype { display: inline-flex; align-items: center; min-height: 44px; }
               </div>
               <div>
                 <h4>What it reveals</h4>
-                <p>A wildfire breaks open seeds that have lain dormant for years. It does the same to a community’s secrets, for better or for worse.</p>
+                <p>The firestorm brings long-hidden community secrets into the open, even as Sterling searches for his kidnapped children.</p>
               </div>
             </div>
+            <a class="ep__purchase" href="https://www.amazon.com/dp/1953699669">Explore Episode Three on Amazon <span aria-hidden="true">↗</span></a>
           </div>
         </div>
       </article>
@@ -484,13 +508,13 @@ a.logotype { display: inline-flex; align-items: center; min-height: 44px; }
     <section class="thirteen" id="thirteen" aria-labelledby="thirteen-title">
       <h2 class="visually-hidden" id="thirteen-title">13 vs. 5</h2>
       <div class="thirteen__figures" aria-hidden="true">
-        <p class="fig fig--13"><span class="num">13</span><span class="name">Thanatos</span></p>
+        <p class="fig fig--13"><span class="num">13</span></p>
         <p class="vs">vs.</p>
-        <p class="fig fig--5"><span class="num">5</span><span class="name">Eros</span></p>
+        <p class="fig fig--5"><span class="num">5</span></p>
       </div>
       <div class="thirteen__copy">
-        <p class="thirteen__lead">Under the arson investigation runs the question the series keeps asking: is there any resolution to 13 vs.&nbsp;5?</p>
-        <p>Thirteen for the forces of destruction, five for the forces of life. Eros against Thanatos. It’s a psychological, action, and erotic thriller, written by a psychoanalyst.</p>
+        <p class="thirteen__lead">Under the fire is a question the final episode refuses to make simple: is there any resolution to 13 vs.&nbsp;5?</p>
+        <p>Episode Four asks if there is any resolution to “13 vs. 5,” alongside its larger tension between Eros and Thanatos. The question hangs over a community struggling against its own destructive elements.</p>
       </div>
     </section>
 
@@ -500,6 +524,7 @@ a.logotype { display: inline-flex; align-items: center; min-height: 44px; }
         <div class="author__body">
           <p class="author__lead">Leighton J. Reynolds moved to Santa Clarita in 2001. In October 2007 he watched three wildfires burn across the Santa Clarita Valley at once, and by March 2008 he had started writing. Seaville is modeled on that community.</p>
           <p>He researched arson and spoke with L.A. County arson investigators. He holds a doctorate in Psychoanalytic Studies, is a Certified Psychoanalyst, and has worked as a neuro-psychoanalyst with patients living with PTSD and traumatic brain injury. He still lives and works in Southern California, in the heart of wildfire country.</p>
+          <p class="author__other">His fiction also includes <cite>Not So Easy</cite>, another work in his published catalog.</p>
           <aside class="author__book" aria-label="Nonfiction by Leighton J. Reynolds">
             <p class="author__book-kind">Also by Leighton, nonfiction</p>
             <p class="author__book-title"><cite>The Complex Architecture and Healing of Traumatic Brain Injuries: Listening to the Brain</cite></p>
